@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>MegaMoney!</title>
+
+</head>
+
+<body>
+
+<div id="div3"></div>
+<img src="geld.png" id="id1" onclick="geld()">
+<img id="jpg1">
+
+</body>
+
+<h1 id="id2" class="h1"></h1>
+<h2 id="id3" class="h2"></h2>
+
+<script>
+// gemaakt door bjarne (dikke koe)
+var var1 = 0;
+var var2 = 1;
+	document.getElementById("id3").innerHTML = 'LEVEL 1';
+	
+function geld() {
+
+	var1 += var2;
+	
+	document.getElementById('id2').innerHTML = '€' + var1;
+	
+	if (var1 >= 5000) {
+	
+		var2 = 2;
+		
+		document.getElementById("id3").innerHTML = 'LEVEL 2';
+	};
+	if (var1 >= 16000){
+		
+		var2 = 8;
+			
+		document.getElementById("id3").innerHTML = 'LEVEL 3';
+	};
+	if (var1 >= 64000){
+		
+		var2 = 32;
+		
+		document.getElementById("id3").innerHTML = 'LEVEL 4';
+	};
+	if (var1 >= 244000){
+		
+		var2 = 122;
+		
+		document.getElementById("id3").innerHTML = 'LEVEL 5';
+	};
+	if (var1 >= 512000){
+		
+		document.getElementById('div3').innerHTML = "<h1 class=\"uitgespeeld\">UITGESPEELD!</h1>";
+		
+		var img = document.getElementById('id1');
+		img.parentNode.removeChild(img);
+		
+		var RemoveId = document.getElementById('id3');
+		RemoveId.parentNode.removeChild(RemoveId);
+		
+		var RemoveId2 = document.getElementById('id2');
+		RemoveId2.parentNode.removeChild(RemoveId2);
+		
+		document.getElementById("jpg1").src="RIJK.jpg";
+	};
+};
+
+document.getElementById('id2').innerHTML = "€" + var1;
+
+</script>
+
+<style>
+
+#id1{
+height: 450px;
+width: auto;
+background-color: darkblue;
+transition-duration: 1s;
+border: 3px solid darkgreen;
+border-radius: 1%;
+}
+
+#id1:hover{
+background-color: blue;
+transition-duration: 1s;
+border: 3px solid green;
+border-radius: 5%;
+}
+
+.h1{
+color: green;
+}
+
+body{
+background-color: black;
+}
+
+.h2{
+color: red;
+}
+
+#jpg1{
+width: max(100%);
+height: max(100%);
+}
+
+.uitgespeeld{
+color: green;
+font-size: 50px;
+}
+
+</style>
+
+</html>
