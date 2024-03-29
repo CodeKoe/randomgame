@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <textarea id="TextArea"></textarea>
+    <textarea readonly id="TextArea2"></textarea>
+    <button onclick="klik()">klik op me</button>
+    <script>
+        function klik(){
+            // alert(document.getElementById("TextArea").value)
+            var nummers = document.getElementById("TextArea").value.match(/(\d+)/);
+            document.getElementById("TextArea2").innerHTML = nummers;
+        }
+    </script>
+<style>
+    #TextArea{
+        height: 100px;
+        width: 200px;
+    }
+    #TextArea2{
+        height: 100px;
+        width: 200px;
+    }
+</style>
+</html>
